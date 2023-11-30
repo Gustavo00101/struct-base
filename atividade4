@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+struct dados_instrucao{
+    char nome [200];
+    int nascimento[200];
+    int rg [200];
+    int cpf;
+    
+
+};
+
+int main(){
+
+struct dados_instrucao instrucao[5];
+int i;
+for( i = 0; i < 5; i++)
+{
+    
+setbuf (stdin,0);
+printf (" Digite o seu nome:");
+gets (instrucao[i].nome);
+
+printf (" Digite a data do seu nascimento:");
+scanf("%d",&instrucao[i].nascimento);
+
+printf("digite o seu rg:");
+scanf("%d",&instrucao[i].rg);
+
+printf ("digite seu cpf:");
+scanf ("%d",&instrucao[i].cpf);
+setbuf (stdin,0);
+
+}
+
+
+for( i = 0; i < 5; i++)
+{
+printf ("seu nome: %s \n",instrucao[i].nome);
+printf ("sua data de nascimento: %d \n", instrucao[i].nascimento);
+printf ("seu rg: %d \n", instrucao[i].rg);
+printf ("seu cpf: %d \n", instrucao[i].cpf);
+
+}
+
+return 0;
+}
