@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+struct dados_notas{
+    char nome [200];
+    int idade;
+    float notas [2];
+    
+    
+
+};
+
+int main(){
+
+struct dados_notas notas[3];
+int i;
+int j;
+
+for( i = 0; i < 3; i++)
+{
+    
+setbuf (stdin,0);
+printf (" Digite o seu nome:");
+gets (notas[i].nome);
+
+setbuf (stdin,0);
+printf (" Digite sua idade:");
+scanf("%d",&notas[i].idade);
+
+for( j = 0; j < 2; j++)
+{
+printf (" digite sua nota:", j + 1);
+scanf ("%f",&notas[i].notas[j]);
+}
+setbuf (stdin,0);
+
+}
+
+
+for( i = 0; i < 3; i++)
+{
+printf (" nome do aluno: %s \n",notas[i].nome);
+printf (" idade do aluno: %d \n",notas[i].idade);
+
+for( j = 0; j < 2; j++)
+{
+printf (" nota %dº: %.2f \n", j + 1, notas[i].notas[j]);
+}
+
+
+}
+
+
+
+return 0;
+}
